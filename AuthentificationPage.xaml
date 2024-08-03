@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MAUItestworkForRobotX.AuthentificationPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+
+            <Label
+                Text="Введите логин и пароль"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" />
+
+            <Entry
+                x:Name="_LoginEntry"
+                BackgroundColor="LightGrey"
+                ToolTipProperties.Text="Введите логин"
+                SemanticProperties.Description="Login entry"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Fill"
+                Placeholder="Ваш логин"
+                PlaceholderColor="White" />
+
+            <Entry
+                x:Name="_PasswordEntry"
+                IsPassword="True"
+                BackgroundColor="LightGrey"
+                ToolTipProperties.Text="Введите пароль"
+                SemanticProperties.Description="Password entry"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Fill"
+                Placeholder="Ваш пароль"
+                Completed="_PasswordEntry_Completed"
+                ReturnType="Go"
+                PlaceholderColor="White" />
+            
+            <Button
+                x:Name="_LogInButton"
+                Text="Войти" 
+                SemanticProperties.Hint="Log in "
+                Clicked="LogInButton_Clicked"
+                HorizontalOptions="Fill" />
+
+            <Grid>
+
+                <Label
+                    x:Name="_LoginResultLabel"
+                    HorizontalOptions="Center"
+                    SemanticProperties.HeadingLevel="Level1" />
+
+                <ActivityIndicator
+                    x:Name="_waitingForResponceIndicator" 
+                    Color="Blue"
+                    HorizontalOptions="Center" />
+
+            </Grid>
+            
+            <Image
+                x:Name="_LoginResultImage" 
+                HorizontalOptions="Center"/>
+
+
+
+
+        </VerticalStackLayout>
+        
+        
+        
+    </ScrollView>
+
+</ContentPage>
