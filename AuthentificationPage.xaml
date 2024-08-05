@@ -8,7 +8,6 @@
             Padding="30,0"
             Spacing="25">
 
-
             <Label
                 Text="Введите логин и пароль"
                 Style="{StaticResource Headline}"
@@ -58,17 +57,12 @@
 
             </Grid>
             
+            <!--Этого не было в ТЗ, но с котиками, отображающими ответ сервера, страница выглядит более дружественно.-->            
             <Image
                 x:Name="_LoginResultImage" 
                 HorizontalOptions="Center"/>
 
-
-
-
         </VerticalStackLayout>
-        
-        
-        
     </ScrollView>
 
 </ContentPage>
